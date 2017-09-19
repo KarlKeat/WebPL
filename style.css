@@ -1,0 +1,29 @@
+* {
+    font-family: 'Dosis', sans-serif;
+}
+
+h1 {
+    font-family: 'Questrial', sans-serif;
+}
+
+body {
+    padding-top: 1vh;
+    padding-left: 2vw;
+}
+
+#NavBar {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+#NavBar a:link, a:visited {
+    padding-right: 1.5vw;
+    color: black;
+    text-decoration: none;
+}
+
+#NavBar a:hover {
+    color: lightgray;
+    text-decoration: none;
+}
+
+
