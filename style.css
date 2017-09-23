@@ -11,6 +11,17 @@ body {
     padding-left: 2vw;
 }
 
+h2 {
+  color: #FF5757;
+}
+
+a {
+  color: #FF5757;
+}
+
+a:hover {
+}
+
 #NavBar {
     font-family: 'Julius Sans One', sans-serif;
 }
@@ -28,7 +39,8 @@ body {
 
 .registerbutton {
   display: inline-block;
-  padding: 15px 25px;
+  margin-top: 20px;
+  padding: 15px 20px;
   font-size: 24px;
   cursor: pointer;
   text-align: center;
@@ -36,7 +48,7 @@ body {
   background-color: #FF6B6B;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 8px #999;
 }
 
 .registerbutton:hover {background-color: #FF5757}
@@ -45,4 +57,21 @@ body {
   background-color: #FF5757;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+#RegistrationForm  {
+    border-radius: 5px;
+    padding: 25px;
+    background-color: #FFCDCC;
+}
+
+input {
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+footer {
+  font-size: 13px;
 }
