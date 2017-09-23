@@ -26,4 +26,23 @@ body {
     text-decoration: none;
 }
 
+.registerbutton {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  background-color: #FF6B6B;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
 
+.registerbutton:hover {background-color: #FF5757}
+
+.registerbutton:active {
+  background-color: #FF5757;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
