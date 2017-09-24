@@ -4,45 +4,45 @@
         <title>HackMatch</title>
         <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Questrial|Dosis" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="registration.js"></script>
     </head>
 
     <body>
-        <div>
-            <h1>HackMatch</h1>
+        <div id="TopBar">
+            <div>
+                <h1>HackMatch</h1>
+            </div>
+            <nav>
+                <p>
+                    <a href="index.html">Home</a>
+                    <a href="successStories.html">Success Stories</a>
+                    <a href="login.html">Login</a>
+                    <b><a href="signup.html">Sign Up</a></b>
+                </p>
+            </nav>
         </div>
-        <nav>
-            <p>
-              <a href="index.html">Home</a>
-              <a href="successStories.html">Success Stories</a>
-              <a href="login.html">Login</a>
-              <b><a href="signup.html">Sign Up</a></b>
-            </p>
-        </nav>
-
         <div>
-          <center> <h2> Signing up is easy as 3.14159265359</h2> </center>
+            <center> <h2> Signing up is easy as 3.14159265359</h2> </center>
         </div>
-
-
         <div id = "RegistrationForm">
-          <form action = "">
+          <form onsubmit = "datingQuiz(); return false;">
             <label for = "username">Username:</label><br>
-            <input id = "username" placeholder="username" required autofocus></input> <br>
+            <input id = "username" placeholder="Username" required autofocus></input> <br>
 
             <label for = "email">Email:</label><br>
-            <input type = "email" id = "email" placeholder="email" required></input> <br>
+            <input type = "email" id = "email" placeholder="Email" required></input> <br>
 
             <label for = "password">Password:</label><br>
-            <input type = "password" id = "password" placeholder="password" required></input><br>
+            <input type = "password" id = "password" placeholder="Password" required></input><br>
 
-            <label for = "boolean">What is your favorite boolean operator? (AND, OR, NOT)
-            <input type = "text" id = "boolean" pattern="AND|OR|NOT" placeholder="AND, OR, NOT" required> </input> <br>
+            <label for = "confirm">Confirm Password</label><br>
+            <input type = "password" id = "confirm" placeholder="Confirm Password" required> </input> <br>
 
             Gender:<br>
-            <input type = "text" placeholder = "gender" required> </input>
+            <input type = "text" placeholder = "Gender" required> </input>
+            <center><button class="registerbutton">Sign Up Now!</button></center>
           </form>
         </div>
-        <center><a href=""><button class="registerbutton">Sign Up Now!</button></a></center>
     </body>
 
     <footer>

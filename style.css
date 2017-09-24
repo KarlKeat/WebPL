@@ -7,8 +7,7 @@ h1 {
 }
 
 body {
-    padding-top: 1vh;
-    padding-left: 2vw;
+    margin: 0;
 }
 
 h2 {
@@ -22,21 +21,36 @@ a {
 a:hover {
 }
 
-nav {
+#TopBar {
+    padding-top: 2vh;
+    padding-left: 2vw;
+    padding-bottom: 10px;
+    background-color: #FF6B6B;
+}
+
+#TopBar h1 {
+    color: white;
+}
+
+#TopBar nav {
     font-family: 'Julius Sans One', sans-serif;
 }
 
-nav a:link, a:visited {
+#TopBar a:link, a:visited {
     padding-right: 1.5vw;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
-nav a:hover {
-    color: lightgray;
+#TopBar a:hover {
+    color: lightpink;
     text-decoration: none;
 }
 
+#RegistrationForm {
+    margin: auto;
+    width: 50%;
+}
 
 .registerbutton {
   display: inline-block;
