@@ -8,6 +8,7 @@ h1 {
 
 body {
     margin: 0;
+    background-color: #ffebea;
 }
 
 h2 {
@@ -16,9 +17,6 @@ h2 {
 
 a {
   color: #FF5757;
-}
-
-a:hover {
 }
 
 #TopBar {
@@ -47,14 +45,15 @@ a:hover {
     text-decoration: none;
 }
 
-#RegistrationForm {
-    margin: auto;
-    width: 50%;
+#ContentPanel {
+    padding-top: 2vh;
+    padding-left: 2vw;
 }
 
-.registerbutton {
+.largebutton {
   display: inline-block;
   margin-top: 20px;
+  margin-bottom: 28px;
   padding: 15px 20px;
   font-size: 24px;
   cursor: pointer;
@@ -66,9 +65,11 @@ a:hover {
   box-shadow: 0 8px #999;
 }
 
-.registerbutton:hover {background-color: #FF5757}
+.largebutton:hover {
+    background-color: #FF5757
+}
 
-.registerbutton:active {
+.largebutton:active {
   background-color: #FF5757;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
@@ -78,6 +79,24 @@ a:hover {
     border-radius: 5px;
     padding: 25px;
     background-color: #FFCDCC;
+    margin: auto;
+    width: 50%;
+}
+
+#LoginForm  {
+    border-radius: 5px;
+    padding: 25px;
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    background-color: #FFCDCC;
+    margin: auto;
+    width: 50%;
+}
+
+
+#LoginForm .innerForm {
+    width: 50%;
+    margin: 0 auto;
 }
 
 #satisfactionBar {
@@ -85,7 +104,7 @@ a:hover {
   color: white;
   width: 135px;
   padding: 10px 10px 10px 10px;
-  transition: width 2s;
+  transition: width .5s;
 }
 
 #satisfactionBar:hover {
@@ -99,6 +118,11 @@ input {
     padding: 10px 20px;
     margin-bottom: 10px;
     box-sizing: border-box;
+}
+
+#AuthorContact {
+    position: fixed;
+    bottom: 2vh;
 }
 
 footer {

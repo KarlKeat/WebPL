@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>HackMatch</title>
+        <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Questrial|Dosis" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="cookie_manager.js"></script>
+        <script type="text/javascript" src="registration.js"></script>
+    </head>
+
+    <body>
+        <div id="TopBar">
+            <div>
+                <h1>HackMatch</h1>
+            </div>
+            <nav>
+                <p>
+                    <a href="index.html">Home</a>
+                    <a href="successStories.html">Success Stories</a>
+                    <b><a href="login.html">Login</a></b>
+                    <a href="signup.html">Sign Up</a>
+                </p>
+            </nav>
+        </div>
+        <div>
+            <center> <h2>Log in to start matching!</h2> </center>
+        </div>
+        <div id = "ContentPanel">
+            <div id = "LoginForm">
+                <form onsubmit = "datingQuiz(); return false;">
+                    <div class="innerForm">
+                        <label for = "email">Email:</label><br>
+                        <input type = "email" id = "email" placeholder="Email" required></input> <br>
+
+                        <label for = "password">Password:</label><br>
+                        <input type = "password" id = "password" placeholder="Password" required></input><br>
+
+                    <div>
+                    <center><button class="largebutton">Log In</button></center>
+                </form>
+                <center><a href="signup.html">Don't have an account? Sign up!</a></center>
+            </div>
+            <footer id="AuthorContact">
+                <p>Created by: Karl Keat and Victoria Li</p>
+                <p>Contact information:
+                    <a href="mailto:vl4kz@virginia.edu">
+                    vl4kz@virginia.edu</a> or <a href="mailto:kkf4a@virginia.edu">
+                    kkf4a@virginia.edu</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>

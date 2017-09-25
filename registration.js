@@ -13,7 +13,7 @@ function datingQuiz() {
         <input type = "text" id = "boolean" pattern="AND|OR|NOT|and|or|not|And|Or|Not" placeholder="AND, OR, NOT" required> </input> <br> \
         <label for = "favSort">What is your favorite sorting algorithm?</label><br> \
         <input type = "text" id="favSort" placeholder = "Merge Sort, Bogo Sort, Heap Sort, ..." required> </input> \
-        <center><button class="registerbutton">Next</button></center> \
+        <center><button class="largebutton">Next</button></center> \
     </form>'
 }
 function register() {
