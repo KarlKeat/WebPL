@@ -1,3 +1,4 @@
+/* General overall use */
 * {
     font-family: 'Dosis', sans-serif;
 }
@@ -17,6 +18,17 @@ h2 {
 
 a {
   color: #FF5757;
+}
+
+#AuthorContact {
+    position: fixed;
+    bottom: 2vh;
+}
+
+footer {
+  font-size: 13px;
+  position: relative;
+  z-index: -100;
 }
 
 #TopBar {
@@ -50,6 +62,18 @@ a {
     padding-left: 2vw;
 }
 
+#AuthorContact {
+    position: fixed;
+    bottom: 2vh;
+}
+
+footer {
+  font-size: 13px;
+  position: relative;
+  z-index: -100;
+}
+
+/* Buttons */
 .largebutton {
   display: inline-block;
   margin-top: 20px;
@@ -75,6 +99,7 @@ a {
   transform: translateY(4px);
 }
 
+/* successStories.html -- slideshow */
 div.content {
     position: relative;
     vertical-align: middle;
@@ -112,6 +137,7 @@ div.content:hover div.slideDescBackground {
   position: relative;
 }
 
+/* signup.html */
 #RegistrationForm  {
     border-radius: 5px;
     padding: 25px;
@@ -130,12 +156,19 @@ div.content:hover div.slideDescBackground {
     width: 50%;
 }
 
-
 #LoginForm .innerForm {
     width: 50%;
     margin: 0 auto;
 }
 
+input {
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* index.html */
 #satisfactionBar {
   background-color: #FF5757;
   color: white;
@@ -150,25 +183,10 @@ div.content:hover div.slideDescBackground {
   padding: 10px 10px 10px 10px;
 }
 
-input {
-    width: 100%;
-    padding: 10px 20px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
+
+/* profile.html */
 
 img.profilePicLarge {
     width: 200px;
     height: 200px;
-}
-
-#AuthorContact {
-    position: fixed;
-    bottom: 2vh;
-}
-
-footer {
-  font-size: 13px;
-  position: relative;
-  z-index: -100;
 }
