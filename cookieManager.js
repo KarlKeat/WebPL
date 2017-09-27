@@ -31,7 +31,7 @@ function onLoad() {
                 <p> \
                     <a href="index.html">Home</a> \
                     <a href="profile.html">My Profile</a> \
-                    <a href="" onclick="logOut()">Log Out</a> \
+                    <a href="#" onclick="logOut()">Log Out</a> \
                 </p> \
             </nav> '
     }
@@ -89,8 +89,10 @@ function logIn() {
 }
 
 function logOut() {
-    document.cookie = "";
-    document.window.location = "./index.html"
+    console.log("logging out");
+    var expiry = new Date();
+    document.cookie = document.cookie = "email=;expires=+"+expiry.toUTCString()+"; path=/; domain=.virginia.edu";
+    window.location = "./index.html"
 }
 
 function loadProfile() {
@@ -108,7 +110,3 @@ function loadProfile() {
     }
 }
 
-function logOut() {
-    var expiry = new Date();
-    document.cookie = "user=;expires=+"+expiry.toUTCString()+"; path=/; domain=.localhost";
-}
