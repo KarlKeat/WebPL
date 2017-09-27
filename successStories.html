@@ -4,7 +4,8 @@
         <title>HackMatch</title>
         <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Questrial|Dosis" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script type="text/javascript" src="cookieManager.js"></script>        
+        <script type="text/javascript" src="cookieManager.js"></script>
+        <script type="text/javascript" src="successStories.js"></script>
     </head>
 
     <body onload="onLoad()">
@@ -23,8 +24,35 @@
         </div>
         <div id = "ContentPanel">
             <center> <header> <h2> Are you looking for love? &#9829</h2> </header> </center>
+          </div>
 
+            <center>
+            <div class = "content">
+              <img class = "successSlides" src="successStoriesSlideshow/coupleStory1.jpg" style="width:100%">
+                <div class = "slideDescBackground">
+                  <div class = "slideText">This is a cool story about love. </div>
+                </div>
+            </div>
+            <div class = "content">
+              <img class = "successSlides" src="successStoriesSlideshow/coupleStory2.jpg" style="width:100%">
+                <div class = "slideDescBackground">
+                  <div class = "slideText">This is a cool story about love. </div>
+                </div>
+            </div>
+            <div class = "content">
+              <img class = "successSlides" src="successStoriesSlideshow/coupleStory3.jpg" style="width:100%">
+                <div class = "slideDescBackground">
+                  <div class = "slideText">This is a cool story about love. </div>
+                </div>
+            </div>
 
+            <button class="largebutton" onclick="changeSlides(-1)">&#10094; Prev</button>
+            <button class="largebutton" onclick="changeSlides(1)">Next &#10095;</button>
+        </center>
+
+            <script>
+            showSlideshow(0);
+            </script>
 
             <div>
             <center><a href="signup.html"><button class="largebutton">Sign Up Now!</button></a></center>

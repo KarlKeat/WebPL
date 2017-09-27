@@ -75,6 +75,43 @@ a {
   transform: translateY(4px);
 }
 
+div.content {
+    position: relative;
+    vertical-align: middle;
+    width: 70%;
+    padding: 10px 10px 10px 10px;
+}
+
+div.slideDescBackground {
+  transition: .75s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.slideText {
+  background-color: #FF6B6B;
+  color: white;
+  padding: 10px 10px 10px 10px;
+}
+
+div.content:hover .successSlides {
+  opacity: 0.6;
+}
+
+div.content:hover div.slideDescBackground {
+  opacity: 1;
+}
+
+.successSlides {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+}
+
 #RegistrationForm  {
     border-radius: 5px;
     padding: 25px;
