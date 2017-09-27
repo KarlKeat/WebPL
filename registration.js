@@ -14,7 +14,7 @@ function datingQuiz() {
         <label for = "favSort">What is your favorite sorting algorithm?</label><br> \
         <input type = "text" id="favSort" placeholder = "Merge Sort, Bogo Sort, Heap Sort, ..." required> </input> \
         <center><button class="largebutton">Next</button></center> \
-    </form>'
+    </form>';
 }
 function register() {
     document.getElementById("RegistrationForm").innerHTML = ' \

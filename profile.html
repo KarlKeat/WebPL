@@ -4,39 +4,29 @@
         <title>HackMatch</title>
         <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Questrial|Dosis" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script type="text/javascript" src="cookieManager.js"></script>        
+        <script type="text/javascript" src="cookieManager.js"></script>
+        <script type="text/javascript" src="registration.js"></script>
     </head>
 
-    <body>
+    <body onload="onLoad()">
         <div id="TopBar">
             <div>
                 <h1>HackMatch</h1>
             </div>
             <nav>
                 <p>
-                    <b><a href="index.html">Home</a></b>
-                    <a href="successStories.html">Success Stories</a>
-                    <a href="login.html">Login</a>
-                    <a href="signup.html">Sign Up</a>
+                    <a href="index.html">Home</a>
+                    <b><a href="profile.html">My Profile</a></b>
                 </p>
             </nav>
         </div>
+        <div>
+            <center> <h2>Log in to start matching!</h2> </center>
+        </div>
         <div id = "ContentPanel">
-            <h2> Why join Hackmatch? </h2>
-            <div id = "satisfactionBar">
-            100% satisfaction rate
+            <div id="UserProfile">
+                <!-- Insert profile via JS -->
             </div>
-
-            <table>
-            <tr>
-                <th>Pros</th>
-                <th>Cons</th>
-            </tr>
-            <tr>
-                <td> Similar interests
-                </td>
-            </tr>
-            </table>
             <footer id="AuthorContact">
                 <p>Created by: Karl Keat and Victoria Li</p>
                 <p>Contact information:
