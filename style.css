@@ -169,4 +169,6 @@ img.profilePicLarge {
 
 footer {
   font-size: 13px;
+  position: relative;
+  z-index: -100;
 }
