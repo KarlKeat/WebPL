@@ -1,10 +1,12 @@
 
-var email_password = {
+var email_password = { 
+    // Hard-coded list of logins, temporary
     "kk4fa@virginia.edu": "password123",
     "vl4kz@virginia.edu": "javasucks"                    
     };
 
 var user_data = {
+    // Hard-coded list of account details, temporary
     "kk4fa@virginia.edu": {
         "name": "Karl Keat",
         "gender": "Male",
@@ -20,6 +22,7 @@ var user_data = {
 };
 
 function onLoad() {
+    // Determines if the user is logged in, if so, adjusts Navigation bar and redirects to profile
     console.log(document.cookie);
     loginRedirect();
     if (isLoggedIn()) {
@@ -38,6 +41,7 @@ function onLoad() {
 }
 
 function loginRedirect() {
+    // Redirects away from pages which cannot be accessed while logged in.
     var currentPage = window.location.pathname;
     currentPage = currentPage.split('/').slice(-1)[0];
     console.log(currentPage);
@@ -51,11 +55,13 @@ function loginRedirect() {
 }
 
 function isLoggedIn() {
+    // Returns true if the user is logged in.
     var cookie = document.cookie;
     return cookie.includes("email=");
 }
 
 function getCurrentUser() {
+    // Returns the email of the current user.
     var cookie = document.cookie;
     var entries = cookie.split(";")
     for (var x = 0; x < entries.length; x++) {
@@ -67,6 +73,7 @@ function getCurrentUser() {
 }
 
 function logIn() {
+    // Attempts to log the user in based on their entry to the login form
     var submission = document.forms[0];
     var email = submission["email"].value;
     var password = submission["password"].value;
@@ -89,6 +96,7 @@ function logIn() {
 }
 
 function logOut() {
+    // Expires the login cookie to log the user out
     console.log("logging out");
     var expiry = new Date();
     document.cookie = document.cookie = "email=;expires=+"+expiry.toUTCString()+"; path=/; domain=.virginia.edu";
@@ -96,6 +104,7 @@ function logOut() {
 }
 
 function loadProfile() {
+    // Dynamically generates the user's profile page
     if(getCurrentUser() !== "") {
         var user = user_data[getCurrentUser()];
         document.getElementById("UserProfile").innerHTML = '\
