@@ -1,4 +1,24 @@
 
+var email_password = {
+    "kk4fa@virginia.edu": "password123",
+    "vl4kz@virginia.edu": "javasucks"                    
+    };
+
+var user_data = {
+    "kk4fa@virginia.edu": {
+        "name": "Karl Keat",
+        "gender": "Male",
+        "img": "./media/karl.jpg",
+        "location": "Charlottesville, VA",
+    },
+    "vl4kz@virginia.edu": {
+        "name": "Victoria Li",
+        "gender": "Female",
+        "img": "./media/victoria.jpg",
+        "location": "Charlottesville, VA",
+    }
+};
+
 function onLoad() {
     console.log(document.cookie);
     loginRedirect();
@@ -29,14 +49,20 @@ function loginRedirect() {
 
 }
 
-var email_password = {
-    "kk4fa@virginia.edu": "password123",
-    "vl4kz@virginia.edu": "javasucks"                    
-    };
-
 function isLoggedIn() {
     var cookie = document.cookie;
-    return cookie.indexOf("email=") !== -1;
+    return cookie.includes("email=");
+}
+
+function getCurrentUser() {
+    var cookie = document.cookie;
+    var entries = cookie.split(";")
+    for (var x = 0; x < entries.length; x++) {
+        if (entries[x].includes("email=")) {
+            return entries[x].split("=")[1];
+        }
+    }
+    return "";
 }
 
 function logIn() {
@@ -59,6 +85,21 @@ function logIn() {
     // https://www.w3schools.com/js/js_cookies.asp
     // https://stackoverflow.com/a/3795002
     // https://stackoverflow.com/a/2619108
+}
+
+function loadProfile() {
+    if(getCurrentUser() !== "") {
+        var user = getCurrentUser();
+        document.getElementById("UserProfile").innerHTML = '\
+        <div> \
+            <img src=' + user["img"] + '> \
+        </div> \
+        <div> \
+            <h3>' + user["name"] + '</h3> \
+            <h4>' + user["location"] + '</h4> \
+            <p>' + user["gender"] + '</p> \
+        </div>'
+    }
 }
 
 function logOut() {
