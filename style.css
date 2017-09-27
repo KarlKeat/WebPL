@@ -50,11 +50,6 @@ a {
     padding-left: 2vw;
 }
 
-button.slideshow {
-  position: absolute;
-  z-index: 100;
-}
-
 .largebutton {
   display: inline-block;
   margin-top: 20px;
@@ -85,12 +80,6 @@ div.content {
     vertical-align: middle;
     width: 70%;
     padding: 10px 10px 10px 10px;
-    z-index: -1;
-}
-
-slideshowButton {
-  position: relative;
-  z-index: 100;
 }
 
 div.slideDescBackground {
