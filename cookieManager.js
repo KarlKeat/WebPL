@@ -31,6 +31,7 @@ function onLoad() {
                 <p> \
                     <a href="index.html">Home</a> \
                     <a href="profile.html">My Profile</a> \
+                    <a href="" onclick="logOut()">Log Out</a> \
                 </p> \
             </nav> '
     }
@@ -85,6 +86,11 @@ function logIn() {
     // https://www.w3schools.com/js/js_cookies.asp
     // https://stackoverflow.com/a/3795002
     // https://stackoverflow.com/a/2619108
+}
+
+function logOut() {
+    document.cookie = "";
+    document.window.location = "./index.html"
 }
 
 function loadProfile() {
