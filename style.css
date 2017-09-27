@@ -120,6 +120,11 @@ input {
     box-sizing: border-box;
 }
 
+img.profilePicLarge {
+    width: 200px;
+    height: 200px;
+}
+
 #AuthorContact {
     position: fixed;
     bottom: 2vh;

@@ -89,10 +89,10 @@ function logIn() {
 
 function loadProfile() {
     if(getCurrentUser() !== "") {
-        var user = getCurrentUser();
+        var user = user_data[getCurrentUser()];
         document.getElementById("UserProfile").innerHTML = '\
         <div> \
-            <img src=' + user["img"] + '> \
+            <img src=' + user["img"] + ' class="profilePicLarge"> \
         </div> \
         <div> \
             <h3>' + user["name"] + '</h3> \
