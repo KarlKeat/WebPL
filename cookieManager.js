@@ -3,8 +3,7 @@ function onLoad() {
     console.log(document.cookie);
     loginRedirect();
     if (isLoggedIn()) {
-        document.getElementById("NavBar").innerHTML = ' \
-        <div id="TopBar"> \
+        document.getElementById("TopBar").innerHTML = ' \
             <div> \
                 <h1>HackMatch</h1> \
             </div> \
@@ -13,16 +12,18 @@ function onLoad() {
                     <a href="index.html">Home</a> \
                     <a href="profile.html">My Profile</a> \
                 </p> \
-            </nav> \
-        </div> '
+            </nav> '
     }
 }
 
 function loginRedirect() {
     var currentPage = window.location.pathname;
-    if (currentPage == "/login.html" || currentPage == "/successStories.html" || currentPage == "signup.html") {
+    currentPage = currentPage.split('/').slice(-1)[0];
+    console.log(currentPage);
+    if (currentPage == "login.html" || currentPage == "successStories.html" || currentPage == "signup.html") {
         if (isLoggedIn()) {
-            window.location = "/profile.html"
+            console.log("redirecting");
+            window.location = "./profile.html"
         }
     }
 
@@ -35,7 +36,7 @@ var email_password = {
 
 function isLoggedIn() {
     var cookie = document.cookie;
-    return cookie != "";
+    return cookie.indexOf("email=") !== -1;
 }
 
 function logIn() {
@@ -46,7 +47,7 @@ function logIn() {
     if (email_password[email] === password) {
         var expiry = new Date();
         expiry.setTime(expiry.getTime() + 3600*1000);
-        document.cookie = "email=" + email + "; expires="+expiry.toUTCString()+"; path=/; domain=.app.localhost";
+        document.cookie = "email=" + email + "; expires="+expiry.toUTCString()+"; path=/; domain=.virginia.edu";
         console.log("logged in!");
         return true;
     }
