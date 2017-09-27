@@ -1,5 +1,6 @@
 
 function onLoad() {
+    console.log(document.cookie);
     loginRedirect();
     if (isLoggedIn()) {
         document.getElementById("NavBar").innerHTML = ' \
@@ -38,9 +39,9 @@ function isLoggedIn() {
 }
 
 function logIn() {
-    var submission = document.getElementById("LoginForm").children;
-    var email = submission.namedItem("email").value;
-    var password = submission.namedItem("password").value;
+    var submission = document.forms[0];
+    var email = submission["email"].value;
+    var password = submission["password"].value;
 
     if (email_password[email] === password) {
         var expiry = new Date();
