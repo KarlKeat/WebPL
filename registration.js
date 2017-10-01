@@ -12,11 +12,14 @@ function datingQuiz() {
         <label for = "favSort">What is your favorite sorting algorithm?</label><br> \
         <input type = "text" id="favSort" placeholder = "Merge Sort, Bogo Sort, Heap Sort, ..." required> </input> \
         <center><button class="largebutton">Next</button></center> \
+         \
     </form>';
 }
 function register() {
     document.getElementById("RegistrationForm").innerHTML = ' \
     <div> \
-        <span>Thank you for registering!</span> \
+        <span>Thank you for registering!</span> <br> \
+        <center><button onclick="window.history.go(-2)" class="largebutton">Go Back</button></center> \
     </div>'
+
 }
