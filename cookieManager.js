@@ -24,6 +24,10 @@ var user_data = {
 function onLoad() {
     // Determines if the user is logged in, if so, adjusts Navigation bar and redirects to profile
     console.log(document.cookie);
+    var currentPage = window.document.toString();
+    var currentURL = window.location.href;
+    var pageData = window.document.toString();
+    history.replaceState(pageData, "home", "index.html");
     loginRedirect();
     if (isLoggedIn()) {
         document.getElementById("TopBar").innerHTML = ' \
