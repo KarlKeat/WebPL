@@ -24,7 +24,7 @@
     }
     submit();
     function displayResponses() {
-        global $username, $email, $password, $gender, $pLanguages, $leastFavPL, $textEditor, $booleanOp, $favSort;        
+        global $username, $email, $password, $gender, $pLanguages, $leastFavPL, $textEditor, $booleanOp, $favSort;
         echo "Username: $username</br>";
         echo "Email: $email</br>";
         echo "Gender: $gender</br>";
@@ -57,7 +57,7 @@
                     <a href="index.html">Home</a>
                     <a href="successStories.html">Success Stories</a>
                     <a href="login.html">Login</a>
-                    <a href="signup.html">Sign Up</a>
+                    <a href="signup_1.php">Sign Up</a>
                 </p>
             </nav>
         </div>

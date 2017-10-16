@@ -1,4 +1,4 @@
-<?php 
+<?php
     session_start();
     $_SESSION["post-data"] = $_POST;
 ?>
@@ -21,7 +21,7 @@
                     <a href="index.html">Home</a>
                     <a href="successStories.html">Success Stories</a>
                     <a href="login.html">Login</a>
-                    <a href="signup.html">Sign Up</a>
+                    <a href="signup_1.php">Sign Up</a>
                 </p>
             </nav>
         </div>
