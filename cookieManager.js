@@ -1,8 +1,8 @@
 
-var email_password = { 
+var email_password = {
     // Hard-coded list of logins, temporary
     "kk4fa@virginia.edu": "password123",
-    "vl4kz@virginia.edu": "javasucks"                    
+    "vl4kz@virginia.edu": "javasucks"
     };
 
 var user_data = {
@@ -27,7 +27,7 @@ function onLoad() {
     var currentPage = window.document.toString();
     var currentURL = window.location.href;
     var pageData = window.document.toString();
-    history.replaceState(pageData, "home", "index.html");
+    //history.replaceState(pageData, "home", "index.html");
     loginRedirect();
     if (isLoggedIn()) {
         document.getElementById("TopBar").innerHTML = ' \
@@ -122,4 +122,3 @@ function loadProfile() {
         </div>'
     }
 }
-
