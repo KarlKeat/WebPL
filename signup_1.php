@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    $_SESSION["post-data"] = $_POST;
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -5,7 +9,6 @@
         <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Questrial|Dosis" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type="text/javascript" src="cookieManager.js"></script>
-        <script type="text/javascript" src="registration.js"></script>
     </head>
 
     <body onload="onLoad()">
@@ -29,21 +32,21 @@
 
         <div id = "ContentPanel">
             <div id = "RegistrationForm">
-                <form onsubmit = "datingQuiz(); return false;">
+                <form action="signup_2.php" method="POST">
                     <label for = "username">Username:</label><br>
-                    <input id = "username" placeholder="Username" required autofocus></input> <br>
+                    <input name = "username" placeholder="Username" required autofocus></input> <br>
 
                     <label for = "email">Email:</label><br>
-                    <input type = "email" id = "email" placeholder="Email" required></input> <br>
+                    <input type = "email" name = "email" placeholder="Email" required></input> <br>
 
                     <label for = "password">Password:</label><br>
-                    <input type = "password" id = "password" placeholder="Password" required></input><br>
+                    <input type = "password" name = "password" placeholder="Password" required></input><br>
 
                     <label for = "confirm">Confirm Password</label><br>
-                    <input type = "password" id = "confirm" placeholder="Confirm Password" required> </input> <br>
+                    <input type = "password" name = "confirm" placeholder="Confirm Password" required> </input> <br>
 
                     Gender:<br>
-                    <input type = "text" placeholder = "Gender" required> </input>
+                    <input type = "text" name = "gender" placeholder = "Gender" required> </input>
                     <center><button class="largebutton">Sign Up Now!</button></center>
                 </form>
             </div>
