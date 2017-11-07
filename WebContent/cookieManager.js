@@ -52,7 +52,7 @@ function loginRedirect() {
     if (currentPage == "login.html" || currentPage == "successStories.html" || currentPage == "signup.html") {
         if (isLoggedIn()) {
             console.log("redirecting");
-            window.location = "./profile.html"
+            window.location = "./profile.jsp"
         }
     }
 
@@ -106,7 +106,7 @@ function logOut() {
     document.cookie = document.cookie = "email=;expires=+"+expiry.toUTCString()+"; path=/; domain=.virginia.edu";
     window.location = "./index.html"
 }
-
+/*
 function loadProfile() {
     // Dynamically generates the user's profile page
     if(getCurrentUser() !== "") {
@@ -122,3 +122,4 @@ function loadProfile() {
         </div>'
     }
 }
+*/

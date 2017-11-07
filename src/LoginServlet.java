@@ -1,3 +1,4 @@
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -43,7 +44,7 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		// want to check database here -- currently holding the place with a csv file
-        String csvFile = "C:\\Users\\vl460\\eclipse-workspace\\HackMatch\\WebContent\\database.csv";
+        String csvFile = "C:\\Users\\Karl\\git\\WebPL-Project\\WebContent\\database.csv";
         String line = "";
         String cvsSplitBy = ",";
 
@@ -58,7 +59,7 @@ public class LoginServlet extends HttpServlet {
                 	out.print("Welcome, " + userInfo[0]);
                     HttpSession session = request.getSession(true);
                     session.setAttribute("email", email);
-                    request.getRequestDispatcher("profile.html").include(request, response);  
+                    request.getRequestDispatcher("profile.jsp").include(request, response);  
                 }
                 else {
                     out.print("Wrong username or password. \n Please try again.");  
