@@ -18,7 +18,7 @@ public class User {
 	}
 	
 	public void populateUser() throws IOException {
-		String csvFile = "C:\\Users\\Karl\\git\\WebPL-Project\\WebContent\\database.csv";
+		String csvFile = "C:\\Users\\vl460\\git\\WebPL\\WebContent\\database.csv";
 		String line;
 		String cvsSplitBy = ",";
 		try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {

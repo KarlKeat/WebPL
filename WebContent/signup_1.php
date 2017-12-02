@@ -18,10 +18,10 @@
             </div>
             <nav>
                 <p>
-                    <a href="index.html">Home</a>
-                    <a href="successStories.html">Success Stories</a>
-                    <a href="login.html">Login</a>
-                    <a href="signup_1.php">Sign Up</a>
+                    <a href="http://localhost:8080/HackMatch/index.html">Home</a>
+                    <a href="http://localhost:8080/HackMatch/successStories.html">Success Stories</a>
+                    <a href="http://localhost:8080/HackMatch/login.html">Login</a>
+                    <a href="http://localhost:80/HackMatch/signup_1.php">Sign Up</a>
                 </p>
             </nav>
         </div>
@@ -32,7 +32,7 @@
 
         <div id = "ContentPanel">
             <div id = "RegistrationForm">
-                <form action="signup_2.php" method="POST">
+                <form action="http://localhost:80/HackMatch/signup_2.php" method="POST">
                     <label for = "username">Username:</label><br>
                     <input name = "username" placeholder="Username" required autofocus></input> <br>
 

@@ -32,6 +32,7 @@
                 <p>
                     <a href="index.html">Home</a>
                     <a href="profile.jsp">My Profile</a>
+                    <a href="ChatApp.jsp">Chat</a>
                     <a href="LogoutServlet">Logout</a>
                 </p>
             </nav>
