@@ -9,6 +9,7 @@
     </head>
     <%@ page language="java" %>
     <%@ page import="beans.User" %>
+    <%@ page import="java.util.Base64" %>
 	<%@ page session="true" %>
 	
 	<jsp:useBean id="user" scope="page" class="beans.User" />
@@ -21,6 +22,9 @@
 	<%
 	}
 		user.populateUser();
+		byte[] imgdata = user.getImgdata();
+		System.out.println(user.getFavLang());
+		String encode = Base64.getEncoder().encodeToString(imgdata);
 	%>
 	
     <body onload="onLoad(); ">
@@ -40,11 +44,11 @@
         <div id = "ContentPanel">
             <div id="UserProfile">
 		        <div>
-		            <img src=<jsp:getProperty name="user" property="img"/> class="profilePicLarge"> 
+		            <img src="data:image/jpeg;base64,<%=encode %>" class="profilePicLarge"> 
 		        </div>
 		        <div>
 		            <h3><jsp:getProperty name="user" property="name"/></h3>
-		            <h4><jsp:getProperty name="user" property="location"/></h4>
+		            <h4><jsp:getProperty name="user" property="favLang"/></h4>
 		            <p><jsp:getProperty name="user" property="gender"/></p>
 		        </div>               
             </div>
