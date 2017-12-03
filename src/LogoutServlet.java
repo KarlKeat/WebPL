@@ -34,7 +34,7 @@ public class LogoutServlet extends HttpServlet {
         PrintWriter out = response.getWriter();  
         
         
-        request.getRequestDispatcher("index.html").include(request, response);  
+        request.getRequestDispatcher("index.jsp").include(request, response);  
           
         HttpSession session = request.getSession(); 
 //        System.out.println(session.getAttribute("email"));

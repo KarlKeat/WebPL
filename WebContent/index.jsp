@@ -12,15 +12,40 @@
             <div>
                 <h1>HackMatch</h1>
             </div>
-            <nav>
+    <%@ page language="java" %>
+    <%@ page import="beans.User" %>
+    <%@ page import="java.util.Base64" %>
+	<%@ page session="true" %>
+	
+	<jsp:useBean id="user" scope="session" class="beans.User" />
+	<%
+		String userEmail = (String)session.getAttribute("email");
+	%>
+	<jsp:setProperty name="user" property="email" value="<%=userEmail%>" />
+	<% if(userEmail == null) { %>
+		            <nav>
                 <p>
-                    <b><a href="index.html">Home</a></b>
+                    <b><a href="index.jsp">Home</a></b>
                     <a href="successStories.html">Success Stories</a>
                     <a href="login.html">Login</a>
                     <a href="http://localhost:80/HackMatch/signup_1.php">Sign Up</a>
                 </p>
             </nav>
         </div>
+	<%
+	}
+else { %>
+            <nav>
+                <p>
+                    <a href="index.jsp">Home</a>
+                    <a href="profile.jsp">My Profile</a>
+                    <a href="ChatApp.jsp">Chat</a>
+                    <a href="match.jsp">Match</a>
+                    <a href="LogoutServlet">Logout</a>
+                </p>
+            </nav>
+        </div>
+        <% } %>
 
         <div id = "ContentPanel">
             <center> <header> <h2> Why join Hackmatch? </h2> </header>

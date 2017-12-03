@@ -109,7 +109,7 @@ VALUES ('$email', '$username', '$password', '$gender', '$pLanguages', '$leastFav
             </div>
             <nav>
                 <p>
-                    <a href="http://localhost:8080/HackMatch/index.html">Home</a>
+                    <a href="http://localhost:8080/HackMatch/index.jsp">Home</a>
                     <a href="http://localhost:8080/HackMatch/successStories.html">Success Stories</a>
                     <a href="http://localhost:8080/HackMatch/login.html">Login</a>
                     <a href="http://localhost:80/HackMatch/signup_1.php">Sign Up</a>

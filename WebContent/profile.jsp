@@ -12,7 +12,7 @@
     <%@ page import="java.util.Base64" %>
 	<%@ page session="true" %>
 	
-	<jsp:useBean id="user" scope="page" class="beans.User" />
+	<jsp:useBean id="user" scope="session" class="beans.User" />
 	<%
 		String userEmail = (String)session.getAttribute("email");
 	%>
@@ -34,9 +34,10 @@
             </div>
             <nav>
                 <p>
-                    <a href="index.html">Home</a>
+                    <a href="index.jsp">Home</a>
                     <a href="profile.jsp">My Profile</a>
                     <a href="ChatApp.jsp">Chat</a>
+                    <a href="match.jsp">Match</a>
                     <a href="LogoutServlet">Logout</a>
                 </p>
             </nav>
